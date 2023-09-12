@@ -73,3 +73,12 @@ LEFT JOIN livros ON autores.id = livros.autor_id
 GROUP BY autores.nome
 HAVING numero_de_livros > 2;
 
+11. Junte as tabelas livros e autores e selecione todos os livros com seus respectivos autores:
+
+sql
+SELECT livros.titulo, autores.nome AS autor
+FROM livros
+INNER JOIN autores ON livros.autor_id = autores.id;
+
+
+
