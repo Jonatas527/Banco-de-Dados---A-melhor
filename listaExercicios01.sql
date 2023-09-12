@@ -135,3 +135,10 @@ SELECT alunos.nome, COUNT(matriculas.id) AS numero_de_matriculas
 FROM alunos
 LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
 GROUP BY alunos.nome;
+
+20. Identifique o produto mais vendido com base na quantidade de transações (não na receita):
+
+sql
+SELECT produto, COUNT(*) AS quantidade_de_vendas
+FROM vendas
+GROUP BY produto
