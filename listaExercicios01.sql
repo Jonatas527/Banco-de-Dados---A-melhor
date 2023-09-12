@@ -94,3 +94,10 @@ sql
 SELECT autores.nome, livros.titulo
 FROM autores
 LEFT JOIN livros ON autores.id = livros.autor_id;
+
+14. Com RIGHT JOIN, liste todos os cursos e alunos, mesmo que o curso não tenha nenhum aluno matriculado:
+
+sql
+SELECT alunos.nome, matriculas.curso
+FROM matriculas
+RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
