@@ -128,3 +128,10 @@ GROUP BY produto
 ORDER BY receita_total ASC
 LIMIT 1;
 
+19. Determine o número total de matrículas para cada aluno:
+
+sql
+SELECT alunos.nome, COUNT(matriculas.id) AS numero_de_matriculas
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
+GROUP BY alunos.nome;
